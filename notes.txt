@@ -1,0 +1,50 @@
+Key references: lua.org, neovim.io/doc/user/lua.html
+~/.config/nvim - default config path for lua config 
+~/.config/nvim/init.lua - lua entry point for configuration
+
+[NVIM HOME]
+~/.config/nvim is home
+[NVIM PACKAGE HOME]
+ ~/.local/share/nvim/site/pack/
+
+[NVIM PLUGINS]
+Fuzzy finder: Telescope
+https://github.com/nvim-telescope/telescope.nvim
+ripgrep executable is required for live_grep and grep_string (sudo apt install ripgrep)
+Package manager: Packer
+https://github.com/wbthomason/packer.nvim
+AST, syntax highlighting, indenting: treesitter
+https://github.com/nvim-treesitter/nvim-treesitter
+https://github.com/nvim-treesitter/playground
+LSP: lsp-zero (Mason included)
+https://github.com/VonHeikemen/lsp-zero.nvim
+
+
+init.lua is like index.html, it is just the entry point
+Any directory in the lua directory is requirable by lua
+'after' directory has package configuration
+
+[COMMAND MODE] 
+% 		    create file
+d		    create directory
+:Ex		    explore - brings up netrw
+:so		    sources the current file
+:messages 	output stacktrace
+
+/* manually install c and rust parsers if necessary*/
+:TSInstall rust
+:TSInstall c
+
+/* install query parser for query editor highlighting */
+:TSInstall query
+
+/* view AST */
+:TSPlaygroundToggle
+
+/* ...just download the code and include the bin folder in PATH, but in case see below */
+MUST update to v0.8.1 or newer. (vim.keymap.set was introduced in 0.7, the ability to index vim.cmd with vimscript commands was added in 0.8.1)
+    or use unstable version:
+    sudo add-apt-repository ppa:neovim-ppa/unstable
+    sudo apt-get update
+    sudo apt-get install neovim
+

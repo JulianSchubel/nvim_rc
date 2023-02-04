@@ -1,0 +1,6 @@
+--main template
+--vim.api.nvim_set_keymap('i', '<a-m>', 'int main()<CR>{<CR>}<ESC>O', { noremap = true })
+--c++ class template
+--vim.api.nvim_set_keymap('i', '<a-c>', 'class <CR>{<CR>public:<CR>protected:<CR>private:<CR>};<ESC>5kA', { noremap = true})
+--c++ template
+--vim.api.nvim_set_keymap('i', '<a-t>', 'template <typename type>', { noremap = true})
