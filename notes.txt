@@ -7,6 +7,13 @@ Key references: lua.org, neovim.io/doc/user/lua.html
 [NVIM PACKAGE HOME]
  ~/.local/share/nvim/site/pack/
 
+[INSTALL LUA IF NOT INSTALLED]
+sudo apt install lua5.4
+
+[RUN THIS TO ENABLE PackerSync]
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 [NVIM PLUGINS]
 Fuzzy finder: Telescope
 https://github.com/nvim-telescope/telescope.nvim
